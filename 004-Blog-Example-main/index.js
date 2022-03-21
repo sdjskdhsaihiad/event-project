@@ -1,4 +1,3 @@
-// Dependencies
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser');
@@ -15,12 +14,13 @@ app.use(bodyParser.urlencoded({
 app.set('view engine','ejs')
 
 // Connect to mongoDb
-const mongoDbURI = 'mongodb+srv://alicechen:Coolbell13@cluster0.2abip.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const mongoDbURI = 'mongodb+srv://alice:password10@cluster0.2abip.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 mongoose.connect(mongoDbURI)
 
 
 // Connect the Models
 require('./models/Event')
+require('./models/User')
 
 
 // Connect the routes
